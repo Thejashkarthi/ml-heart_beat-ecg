@@ -1,10 +1,10 @@
-# ⚡ Pulse AI: Dual-Model ECG Diagnostic Instrument
+# Pulse AI: Dual-Model ECG Diagnostic Instrument
 
 Pulse AI is an advanced, production-ready machine learning system built to classify ECG (electrocardiogram) time-series data. It features a modern, real-time diagnostic dashboard that utilizes a dual-model approach to detect arrhythmias (like AFib) and predict future cardiovascular vulnerability.
 
 ---
 
-## 🧠 Core Architecture (Dual-Model Pipeline)
+## Core Architecture (Dual-Model Pipeline)
 
 This project implements the **"Operation Flower"** analytics pipeline, utilizing two distinct ML architectures to cross-verify signals:
 1. **Module 01 (Clinical HRV Analysis - XGBoost):** Extracts exact physiological features (Heart Rate Variability, Shannon Entropy, Winsorization) using `neurokit2` from detected R-peaks. This tabular data is fed into an extreme gradient boosted decision tree (XGBoost) to detect real-time atrial fibrillation.
@@ -12,7 +12,7 @@ This project implements the **"Operation Flower"** analytics pipeline, utilizing
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 The repository has been refactored for professional production use:
 
@@ -32,7 +32,7 @@ The repository has been refactored for professional production use:
 
 ---
 
-## 🚀 How to Run the Dashboard
+## How to Run the Dashboard
 
 The instrument runs entirely locally via a fast, native Streamlit interface.
 
@@ -55,7 +55,7 @@ streamlit run app.py
 
 ---
 
-## 📊 Key Features
+## Key Features
 - **Real-Time Signal Telemetry**: Immediate visual traces of ingested time-series data.
 - **Zero-Latency Module Imports**: Models bypass terminal overhead, importing directly for maximum UI stability.
 - **Dynamic Portability**: No hardcoded paths; models detect execution context automatically.

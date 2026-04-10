@@ -7,7 +7,7 @@ from predict_hrv import predict_from_file
 from fpredictcnn import predict_future_abnormality
 
 # --- 1. SET PAGE CONFIG & STYLING ---
-st.set_page_config(page_title="Pulse AI Instrument", layout="wide", page_icon="⚡")
+st.set_page_config(page_title="Pulse AI Instrument", layout="wide")
 
 # Safe CSS to hide Streamlit clutter, no layout hacking.
 st.markdown("""
@@ -21,7 +21,7 @@ st.markdown("""
 # --- 2. HEADER (Native Flow, No Fixed Positioning) ---
 col_head1, col_head2, col_head3 = st.columns([1, 2, 1])
 with col_head2:
-    st.markdown("<h1 style='text-align: center; color: #ef4444;'>⚡ PULSE AI</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: #ef4444;'>PULSE AI</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='text-align: center; color: #f8fafc; letter-spacing: 2px;'>DIAGNOSTIC INSTRUMENT</h3>", unsafe_allow_html=True)
 st.divider()
 
@@ -51,7 +51,7 @@ if uploaded_file:
     
     st.divider()
     
-    # 📊 Signal Preview using native Streamlit layout
+    # Signal Preview using native Streamlit layout
     st.markdown("### 2. Signal Telemetry")
     try:
         raw_signal = load_signal_from_file(temp_path)
